@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demowebapp
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: demowebapp
+    spec:
+      containers:
+        - name: demowebapp-container
+          image: mimiibm/demowebapp:v1
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /app/appsettings.json
+              name: test
+              readOnly: true
+              subPath: appsettings.json
+      volumes:
+        - configMap:
+            defaultMode: 420
+            name: appsettings
+          name: test
+  selector:
+    matchLabels:
+      app: demowebapp
