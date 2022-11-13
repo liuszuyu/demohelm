@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: demowebapp-container
-          image: mimiibm/demowebapp:v1
+          image: mimiibm/demoprivate:v1
           ports:
             - containerPort: 80
           volumeMounts:
@@ -24,6 +24,8 @@ spec:
             defaultMode: 420
             name: appsettings
           name: test
+      imagePullSecrets:
+        - name: regcred
   selector:
     matchLabels:
       app: demowebapp

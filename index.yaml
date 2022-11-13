@@ -3,12 +3,12 @@ entries:
   demowebapplication:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-11-12T22:07:18.222571+08:00"
+    created: "2022-11-13T21:59:01.812218+08:00"
     description: A Helm chart for Kubernetes
-    digest: db41281aed3971cb8a88043ae22ff9d7a4940b6e70954ff05ee39d5fff864dad
+    digest: 4325752d078f7069d1b9a051c5dc3bf627a311f362c558bd7cb8ada17bf9b8b9
     name: demowebapplication
     type: application
     urls:
-    - https://liuszuyu.github.io/demohelm/demowebapplication-0.1.0.tgz
+    - https://pages.github.ibm.com/Mimi-Liu/demohelm/demowebapplication-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-12T22:07:18.221084+08:00"
+generated: "2022-11-13T21:59:01.810557+08:00"

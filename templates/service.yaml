@@ -5,9 +5,8 @@ metadata:
 spec:
   selector:
     app: demowebapp
-  type: NodePort
+  type: ClusterIP
   ports:
     - protocol: TCP
       port: 3001
       targetPort: 80
-      nodePort: 30390
